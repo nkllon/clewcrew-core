@@ -7,7 +7,8 @@ import sys
 from pathlib import Path
 
 # Add clewcrew-agents to path
-sys.path.insert(0, str(Path(__file__).parent.parent.parent.parent / "clewcrew-agents" / "src"))
+sys.path.insert( \
+    0, str(Path(__file__).parent.parent.parent.parent / "clewcrew-agents" / "src"))
 
 import logging
 from datetime import datetime, timezone
@@ -402,7 +403,8 @@ class ClewcrewOrchestrator:
                 "timestamp": datetime.now(timezone.utc).isoformat()
             }
 
-    def _generate_quality_summary(self, agent_quality_results: Dict[str, Any]) -> Dict[str, Any]:
+    def _generate_quality_summary( \
+    self, agent_quality_results: Dict[str, Any]) -> Dict[str, Any]:
         """
         Generate overall quality summary from agent results.
         
